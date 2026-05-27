@@ -6,7 +6,7 @@ Supports BP21, BPMP, BPA1, and BPPU.
 
 import streamlit as st
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 import random
 import time
 
@@ -551,7 +551,8 @@ if active_type and active_file:
 
         col_dl1, col_dl2, col_dl3 = st.columns([1, 2, 1])
         with col_dl2:
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            wib_tz = timezone(timedelta(hours=7))
+            timestamp = datetime.now(wib_tz).strftime("%Y%m%d_%H%M%S")
             filename = f"{active_type.lower()}_{timestamp}.xml"
 
             # Roll easter egg based on dynamic probability
