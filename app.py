@@ -377,7 +377,7 @@ for col, doc_type_key in grid:
     with col:
         with st.container(border=True):
             st.markdown(
-                f'<div style="min-height: 130px; display: flex; flex-direction: column;">'
+                f'<div style="min-height: 160px; display: flex; flex-direction: column;">'
                 f'<h4 class="card-header">{cfg["title"]}</h4>'
                 f'<p class="card-desc" style="flex-grow: 1;">{cfg["desc"]}</p>'
                 f'<div class="badge-row">{badges_html}</div>'
