@@ -247,12 +247,14 @@ with st.sidebar:
 # =============================================================================
 # Header
 # =============================================================================
-st.markdown('<p class="main-title">📄 Coretax Helper</p>', unsafe_allow_html=True)
-st.markdown(
-    '<p class="subtitle">Converter Excel to XML untuk Coretax — '
-    'Upload file Excel ke salah satu tipe di bawah</p>',
-    unsafe_allow_html=True,
-)
+st.markdown("""
+<div class="card" style="padding: 20px 24px; margin-bottom: 24px;">
+    <h1 style="margin: 0 0 8px 0; font-size: 2rem; font-weight: 700; color: #00D4FF;">📄 Coretax Helper</h1>
+    <p style="margin: 0; color: rgba(250, 250, 250, 0.7); font-size: 1.05rem;">
+        Converter Excel to XML untuk Coretax — Upload file Excel ke salah satu tipe di bawah
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 # =============================================================================
 # Card definitions
