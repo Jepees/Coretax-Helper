@@ -377,9 +377,11 @@ for col, doc_type_key in grid:
     with col:
         with st.container(border=True):
             st.markdown(
+                f'<div style="min-height: 130px; display: flex; flex-direction: column;">'
                 f'<h4 class="card-header">{cfg["title"]}</h4>'
-                f'<p class="card-desc">{cfg["desc"]}</p>'
-                f'<div class="badge-row">{badges_html}</div>',
+                f'<p class="card-desc" style="flex-grow: 1;">{cfg["desc"]}</p>'
+                f'<div class="badge-row">{badges_html}</div>'
+                f'</div>',
                 unsafe_allow_html=True,
             )
             uploaded = st.file_uploader(
